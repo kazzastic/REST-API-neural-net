@@ -6,6 +6,8 @@
         font-family: Times New Roman;
         text-align: center;
       }
+      body {background-color:#555;}
+      .navbar-fixed {position: absolute;z-index:999999999;}
     </style>
       <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -24,12 +26,72 @@ body {
 
 
 <body>
+                        <!--NAVBAR-->
+  <nav>
+    <div class="nav-wrapper black">
+      <a href="#" class="brand-logo center" id="babu_font"><b><span class="white-text">BabuSoft();</span></b></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+      </ul>
+      <div class="row">
+        <ul id="slide-out" class="side-nav">
 
-<p>Enter the URL to an image for a model prediction!</p>
+          <li><div class="user-view">
+              <div class="background">
+                <img src="babulogo.jpg" width="300 px" height="200 px">
+              </div>
+                <a href="#!user"><img class="circle" src="saadbhai.jpeg"></a>
+                <a href="#!name"><span class="white-text name">Saad Bhai</span></a>
+                <a href="#!email"><span class="white-text email">saadBhai@hawtmail.com</span></a>
+              </div></li>
+          <li><a class="waves-effect" href="https://github.com"><i class="material-icons">home</i>Home</a></li>
+          <li><a class="waves-effect" href="#!"><i class="material-icons">info</i>Services</a></li>
+          <li><a class="waves-effect" href="#!"><i class="material-icons">people</i>Team</a></li>
+          <li><a class="waves-effect" href="#!"><i class="material-icons">phone</i>Contact-Us</a></li>
+          <li><a class="waves-effect" href="#!"><i class="material-icons">more</i>More</a></li>
+        </ul>
+        <a href="#" data-activates="slide-out" class="button-collapse show-on-medium-and-up"><i class="material-icons">menu</i></a>
+      </div>
+    </div>
+  </nav>
+                        <!--NAVBAR END-->
+                        <!--SLIDER-->
+  <div class="carousel carousel-slider center">
+    <div class="carousel-fixed-item center">
+      <a class="btn waves-effect white grey-text darken-text-2">Lets Get Started!</a>
+    </div>
+    <div class="carousel-item teal white-text" href="#one!">
+      <h2>Step # 1</h2>
+      <p class="white-text"><b>Take a picture of any NED building</b></p>
+      <h6>Swipe Right</h6>
+    </div>
+    <div class="carousel-item teal white-text" href="#two!">
+      <h2>Step # 2</h2>
+      <p class="white-text"><b>Press predict!</b></p>
+      <h6>Swipe Right</h6>
+    </div>
+    <div class="carousel-item teal white-text" href="#three!">
+      <h2>Step # 3</h2>
+      <p class="white-text"><b>Some real computer science magic predicts what picture was taken</b></p>
+      <h6>Swipe Right</h6>
+    </div>
+    <div class="carousel-item teal white-text" href="#four!">
+      <h2>Step # 4</h2>
+      <p class="white-text"><b>Enjoy, now you know where NIC building is!</b></p>
+      <h6>Swipe Right</h6>
+    </div>
+  </div>
+                          <!--SLIDER END-->
+                          <!--Parallax-->
+  <div class="parallax-container">
+    <div class="parallax"><img src="https://raw.githubusercontent.com/kazzastic/JS/master/card.jpg"></div>
+  </div>
+                          <!--Parallax END-->
+                          
+<p style="text-align: center; color: aliceblue">TAKE A PICTUREEEEEEEEEEEEEEEEEEEEEEe<br>Remeber to flip phone horizontally for better predictions!</p>
 
 <form action="/predict_object/" method="post">
 Image URL:<br>
-  <input type="file" accept="image/*" name="image_url" style="width: 600px;" capture="user">
+  <input type="file" accept="image/*" name="image_url" style="width: 600px;" capture>
 <br>
 
 <button type="submit" style="font:20px">
@@ -46,5 +108,25 @@ Image URL:<br>
 
 {% endif %}
 
+                              <!--Parallax-->
+  <div class="parallax-container">
+    <div class="parallax"><img src="https://raw.githubusercontent.com/kazzastic/JS/master/card.jpg"></div>
+  </div>
+                            <!--Parallax END-->
+
+
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<script>
+  $('.button-collapse').sideNav();
+  $('.carousel.carousel-slider').carousel({
+    fullWidth: true,
+    indicators: true
+  });
+  $(document).ready(function(){
+    $('.parallax').parallax();
+  });
+</script>
 </body>
 </html>
