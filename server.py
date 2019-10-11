@@ -23,7 +23,7 @@ def prepare(filepath):
 
     return new_array.reshape(-1, IMG_SIZE, IMG_SIZE, 3)
 
-@app.route('/')
+@app.route('/index')
 def index_page():
     return render_template('index.html')
 
@@ -47,4 +47,7 @@ def render_message():
     print('Python module executed successfully')
         
     #Return the model results to the web page
-    return render_template('index.html',message=message, data=prediction[0][0])  
+    return render_template('index.html',message=message, data=prediction[0][0]) 
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port = 8001)
