@@ -13,9 +13,14 @@ This was made with tears and sweat. Basically this DNN was implemented using ten
 #### Layers 
 ![alt text](https://github.com/kazzastic/REST-API-neural-net/blob/master/misc/Screenshot%20from%202019-10-15%2002-04-04.png)
 
+#### Architecture
 The DNN can be further visualized as here,
 ![alt text](https://github.com/kazzastic/REST-API-neural-net/blob/master/misc/nn.svg)
 
-#### Deployment 
+### Deployment 
 This model was deployed as a flask web app on heroku.
 can be found [here](https://ned-net.herokuapp.com/) 
+
+### Future
+This model can be further expanded by adding building and navigation for entire NED landmarks and buildings!
+
