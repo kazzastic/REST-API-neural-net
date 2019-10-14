@@ -23,7 +23,7 @@ def prepare(filepath):
 
     return new_array.reshape(-1, IMG_SIZE, IMG_SIZE, 3)
 
-@app.route('/index')
+@app.route('/')
 def index_page():
     return render_template('index.html')
 
