@@ -8,11 +8,14 @@ Created on Thu Oct 10 17:09:46 2019
 
 from flask import Flask, render_template, request
 import tensorflow as tf
+import os
 from skimage import io
+import numpy as np
 import cv2
 
 app = Flask(__name__)
-
+UPLOAD_FOLDER = os.path.basename('uploads')
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 CATEGORIES = ["WHITE-HOUSE", "NIC"]
 
@@ -33,8 +36,9 @@ def render_message():
     model = tf.keras.models.load_model('NIC-CNN.model')
     
     #Get image URL as input
-    image_url = request.form['image_url']
-    image = io.imread(image_url)
+    image_url = request.files['image_url']
+    #image = io.imread(image_url)
+    image = cv2.imdecode(np.fromstring(image_url.read(), np.uint8), cv2.IMREAD_UNCHANGED)
     print("#############################################################")
     print(image)
     
