@@ -8,4 +8,14 @@ look wise. Even after the mediocrity of building and structures being quite simi
 Another thing that the model was trained on 600 original pictures, which were then augmented to make about 4800 pictures each class. 
 
 ### How was this made?
-This was made with tears and sweat. Basically this DNN was implemented using tensorflow as the backend and keras methods in order to build the DNN layers. 
+This was made with tears and sweat. Basically this DNN was implemented using tensorflow as the backend and keras methods in order to build the DNN layers. The DNN layers studies and chosen from various classification models and this resulted in a model which is under 60 MB memory. 
+
+#### Layers 
+![alt text](https://github.com/kazzastic/REST-API-neural-net/blob/master/misc/Screenshot%20from%202019-10-15%2002-04-04.png)
+
+The DNN can be further visualized as here,
+![alt text](https://github.com/kazzastic/REST-API-neural-net/blob/master/misc/nn.svg)
+
+#### Deployment 
+This model was deployed as a flask web app on heroku.
+can be found [here](https://ned-net.herokuapp.com/) 
