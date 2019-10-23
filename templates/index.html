@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>NED-NET Implementation for RCAI</title>
+  <title>Visual Landmark Detection using CNN || Implementation for RCAI</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 
@@ -10,10 +10,10 @@
 
 <div class = "container">
     <div class = "starter-template">
-	<h1>NED-NET</h1>
+	<h1>Visual Landmark Detection using CNN</h1>
         <h4>This model can be further extended for the use, by adding more classes, data and training.</h4><br><br><br><br>
         <p class = "lead"> Try uploading an image of NIC or WHITE-HOUSE</p>
-        <p> NED Landmarks detection using | Powered by Python, Flask, OpenCV and Tensorflow </p>
+        <p> NED Landmarks detection using CNN | Powered by Python, Flask, OpenCV and Tensorflow </p>
         <p> By Syed Kazim - Oct, 2019 </p>
     </div>
 </div>
@@ -31,8 +31,8 @@
 
 <div class="text-center">
 {% if message %}
-<p>{{message}}</p><br>
-<p>{{image_url}}</p><br>
+<h2>{{message}}</h2><br><br>
+<img src="/{{imgpath}}" alt="comeee on" height="480" width="640">
 {% endif %}
 </div>
 

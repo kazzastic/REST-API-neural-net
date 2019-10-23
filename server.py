@@ -10,12 +10,15 @@ from flask import Flask, render_template, request
 import tensorflow as tf
 import os
 from skimage import io
+from werkzeug import secure_filename
 import numpy as np
 import cv2
 
 app = Flask(__name__)
 UPLOAD_FOLDER = os.path.basename('uploads')
+#PEOPLE_FOLDER = os.path.join('static', 'people_photo')
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+#app.config['UPLOAD_FOLDER'] = PEOPLE_FOLDER
 
 CATEGORIES = ["WHITE-HOUSE", "NIC"]
 
@@ -37,8 +40,13 @@ def render_message():
     
     #Get image URL as input
     image_url = request.files['image_url']
+    f = image_url
+    sfname = 'static/'+str(secure_filename(f.filename))
+    f.save(sfname)
     #image = io.imread(image_url)
-    image = cv2.imdecode(np.fromstring(image_url.read(), np.uint8), cv2.IMREAD_UNCHANGED)
+
+    #image = cv2.imdecode(np.fromstring(image_url.read(), np.uint8), cv2.IMREAD_UNCHANGED)
+    image = cv2.imread(sfname)
     print("#############################################################")
     print(image)
     
@@ -56,7 +64,7 @@ def render_message():
     print('Python module executed successfully')
         
     #Return the model results to the web page
-    return render_template('index.html',message=message, data=prediction[0][0]) 
+    return render_template('index.html',message=message, data=prediction[0][0], imgpath = sfname) 
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port = '8000')
