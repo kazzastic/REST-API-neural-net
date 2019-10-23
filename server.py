@@ -48,6 +48,11 @@ def render_message():
     
     #Store model prediction results to pass to the web page
     message = "Model prediction: {}".format(CATEGORIES[int(prediction[0][0])])
+    
+    ###editting*****************
+    print(image_url)
+    print("image", message)
+    
     print('Python module executed successfully')
         
     #Return the model results to the web page
