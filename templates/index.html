@@ -11,7 +11,13 @@
 <div class = "container">
     <div class = "starter-template">
 	<h1>Visual Landmark Detection using CNN</h1>
-        <h4>This model can be further extended for the use, by adding more classes, data and training.</h4><br><br><br><br>
+        <h4>This model can be further extended for the use, by adding more classes, data and training.</h4><br>
+<div class="text-center">
+{% if message %}
+<h2>{{message}}</h2><br><br>
+<img src="/{{imgpath}}" alt="comeee on" height="480" width="640">
+{% endif %}
+</div><br><br>
         <p class = "lead"> Try uploading an image of NIC or WHITE-HOUSE</p>
         <p> NED Landmarks detection using CNN | Powered by Python, Flask, OpenCV and Tensorflow </p>
         <p> By Syed Kazim - Oct, 2019 </p>
@@ -29,12 +35,12 @@
     </form>
 </header>
 
-<div class="text-center">
+<!--div class="text-center">
 {% if message %}
 <h2>{{message}}</h2><br><br>
 <img src="/{{imgpath}}" alt="comeee on" height="480" width="640">
 {% endif %}
-</div>
+</div-->
 
 </body>
 </html>
