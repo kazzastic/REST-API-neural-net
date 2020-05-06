@@ -19,7 +19,16 @@ The DNN can be further visualized as here,
 
 ### Deployment 
 This model was deployed as a flask web app on heroku.
-can be found [here](https://ned-net.herokuapp.com/) 
+can be found [here](https://ned-net.herokuapp.com/)
+
+
+### Publlication
+This research has been published on [IEEE Xplore](https://ieeexplore.ieee.org/document/9073795)
+Cite this research work, 
+
+
+@INPROCEEDINGS{9073795, author={S. K. {Raza} and T. {Rajab} and S. A. {Ahmed} and M. {Khurram}}, booktitle={2020 3rd International Conference on Computing, Mathematics and Engineering Technologies (iCoMET)}, title={Visual Landmarks Recognition of Urban Structures using Convolutional Neural Network}, year={2020}, volume={}, number={}, pages={1-9},}
+
 
 ### Future
 This model can be further expanded by adding building and navigation for entire NED landmarks and buildings!
