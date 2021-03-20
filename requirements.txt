@@ -45,7 +45,7 @@ isort==4.3.21
 itsdangerous==1.1.0
 jedi==0.15.1
 jeepney==0.4.1
-Jinja2==2.10.1
+Jinja2==2.11.3
 jsonschema==3.0.2
 Keras==2.2.5
 Keras-Applications==1.0.8
