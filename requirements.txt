@@ -67,7 +67,7 @@ notebook==6.0.1
 numpy==1.17.2
 numpydoc==0.9.1
 olefile==0.46
-opencv-python==4.1.0.25
+opencv-python==4.2.0.32
 packaging==19.2
 pandocfilters==1.4.2
 parso==0.5.1
